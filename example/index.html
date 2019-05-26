@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jqContext Menu Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="./../src/jqcontext-menu.css">
+    </link>
+
+    <style>
+        .hummingbird-popover,
+        .hummingbird-popover * {
+            list-style: none;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        .hummingbird-popover label {
+            font-weight: normal;
+        }
+
+        .hummingbird-popover input[type=checkbox] {
+            width: 16px;
+            height: 16px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .hummingbird-popover ul:not(.hummingbird-base) {
+            display: none;
+        }
+
+        .hummingbird-popover .fa {
+            font-style: normal;
+            cursor: pointer;
+        }
+
+        .popover .arrow {
+            display: none;
+        }
+
+        .popover-content {
+            padding: 0;
+        }
+
+        .popover-title {
+            text-align: center;
+        }
+
+
+        .hummingbird-popover .table-responsive {
+            border: none;
+            margin: 0px;
+        }
+
+        .hummingbird-popover .table {
+            border: none;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="content" class="m-3">
+        <div class="row">
+            <div class="col-3 p-5 bg-success">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-info">Content Content</div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-5 bg-success">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-info">Content Content</div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-5 bg-success">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-info">Content Content</div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-5 bg-success">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-info">Content Content</div>
+        </div>
+    </div>
+    <div id="content-2" class="m-3">
+        <div class="row">
+            <div class="col-3 p-5 bg-info">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-success">Content Content</div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-5 bg-info">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-success">Content Content</div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-5 bg-info">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-success">Content Content</div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-5 bg-info">Content Content</div>
+            <div class="col-3 p-5 bg-danger">Content Content</div>
+            <div class="col-3 p-5 bg-warning">Content Content</div>
+            <div class="col-3 p-5 bg-success">Content Content</div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./../src/jqcontext-menu.js"></script>
+    <script>
+        $('#content').jqContextMenu({
+            contextMenu: [{
+                    icon: 'lnr lnr-pencil',
+                    text: 'Edit',
+                    dataKey: 'edit'
+                },
+                {
+                    icon: 'lnr lnr-file-empty',
+                    text: 'Copy',
+                    dataKey: 'copy'
+                },
+                {
+                    icon: 'lnr lnr-bookmark',
+                    text: 'Add to Bookmarks',
+                    dataKey: 'bookmark'
+                },
+                {
+                    icon: 'lnr lnr-pie-chart',
+                    text: 'Stats',
+                    dataKey: 'stats',
+                },
+                {
+                    icon: 'lnr lnr-trash',
+                    text: 'Delete',
+                    dataKey: 'bookmark'
+                }
+            ]
+        });
+
+        $('#content-2').jqContextMenu({
+            defaultStyle: 'jqcontext-menu-dark',
+            contextMenu: [{
+                    icon: 'lnr lnr-pencil',
+                    text: 'Edit',
+                    dataKey: 'edit'
+                },
+                {
+                    icon: 'lnr lnr-file-empty',
+                    text: 'Copy',
+                    dataKey: 'copy'
+                },
+                {
+                    icon: 'lnr lnr-bookmark',
+                    text: 'Add to Bookmarks',
+                    dataKey: 'bookmark'
+                },
+                {
+                    icon: 'lnr lnr-pie-chart',
+                    text: 'Stats',
+                    dataKey: 'stats',
+                },
+                {
+                    icon: 'lnr lnr-trash',
+                    text: 'Delete',
+                    dataKey: 'delete'
+                }
+            ]
+        });
+
+        // content context menu item click handler
+        $(document).on('mousedown', '#content #jqcontext-menu li', function () {
+            var dataKey = $(this).attr('data-key');
+
+            if (dataKey == 'edit'){
+                alert('you clicked "edit" button');
+            } else {
+                alert('you clicked ' + dataKey+ ' button');
+            }
+        });
+
+        // content-2 context menu item click handler
+        $(document).on('mousedown', '#content-2 #jqcontext-menu li', function () {
+            var dataKey = $(this).attr('data-key');
+
+            alert('You clicked: ' + dataKey+ ' button!');
+        });
+    </script>
+</footer>
+
+</html>
